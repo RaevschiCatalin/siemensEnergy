@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from "./Components/Navbar.jsx";
@@ -7,8 +7,6 @@ import Main from './Components/Main';
 import Forecast from './Components/Forecast';
 
 function App() {
-
-
   return (
     <Router>
     <> 
