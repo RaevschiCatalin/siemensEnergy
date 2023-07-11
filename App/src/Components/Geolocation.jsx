@@ -36,7 +36,7 @@ function Geolocation() {
       {!location ? <button className='text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700' onClick={handleLocationClick}>Get Location</button> : null}
       {location && !weather ? <p>Loading weather data...</p> : null}
       {weather ? (
-        <div>
+        <div className='my-6'>
           <p>Location: {weather.name}</p>
           <p>Temperature: {Math.floor(weather.main.temp)} °C</p>
           <p>Weather: {weather.weather[0].description}</p>
