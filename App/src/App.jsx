@@ -7,16 +7,7 @@ import Main from './Components/Main';
 import Forecast from './Components/Forecast';
 
 function App() {
-  // const [latitude, setLatitude] = useState(null);
-  // const [longitude, setLongitude] = useState(null);
-  // //get user location
-  // useEffect(() => {
-  //   if (navigator.geolocation) {
-  //     navigator.geolocation.getCurrentPosition(success, error);
-  //   } else {
-  //     console.log("Geolocation not supported");
-  //   }
-  // }, []);
+
 
   return (
     <Router>

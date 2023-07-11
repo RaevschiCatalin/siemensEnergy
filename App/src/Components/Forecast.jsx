@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
-const Forecast = ({ latitude, longitude }) => {
+const Forecast = (weatherData) => {
   const [forecastData, setForecastData] = useState(null);
   const API_KEY = 'ef494ceb6c433d1058a661ce25d99bac';
+  const latitude = weatherData.coord.lat;
+  const longitude = weatherData.coord.lon;
   const API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`;
+  setLocation({ latitude, longitude });
+  console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,10 +26,9 @@ const Forecast = ({ latitude, longitude }) => {
   if (!forecastData) {
     return <p>Loading forecast data...</p>;
   }
-
   const forecastList = forecastData.list.slice(0, 5);
-
   return (
+    
     <div className="grid gap-4">
       {forecastList.map((forecast) => (
         <div
@@ -43,7 +46,10 @@ const Forecast = ({ latitude, longitude }) => {
         </div>
       ))}
     </div>
+    
   );
 };
+
+
 
 export default Forecast;
