@@ -3,6 +3,6 @@ Tried to implement the weather app using my own powers. I have used the openweat
 - ReactJS
 - TailwindCSS
 - OpenWeatherMap API
-- ViteJS
+- Vite
 
 
